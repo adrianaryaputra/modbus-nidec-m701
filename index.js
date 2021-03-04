@@ -7,6 +7,8 @@ const {
 
 } = require('com-modbus');
 
+const ModbusDevice_Nidec_M701_TripCode = require('./trip-code.json');
+
 
 
 
@@ -25,7 +27,7 @@ class ModbusDevice_Nidec_M701 extends ModbusDevice{
             modbusId,
             modbusTimeout,
         });
-        this.tripCode = tripCode;
+        this.tripCode = ModbusDevice_Nidec_M701_TripCode;
     }
 
 
@@ -172,6 +174,7 @@ module.exports = {
     ModbusHandler,
     ModbusDevice,
     ModbusDevice_Nidec_M701,
+    ModbusDevice_Nidec_M701_TripCode,
     ModbusCommand,
     SerialPort,
 
