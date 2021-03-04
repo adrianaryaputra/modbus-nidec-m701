@@ -1,0 +1,25 @@
+{
+  "name": "modbus-nidec-m701",
+  "version": "1.0.0",
+  "description": "node.js modbus implementation for Nidec M701 AC Drive",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/adrianaryaputra/modbus-nidec-m701"
+  },
+  "keywords": [
+    "serial",
+    "modbus",
+    "RTU",
+    "nidec",
+    "m701"
+  ],
+  "author": "adrianaryaputra",
+  "license": "MIT",
+  "dependencies": {
+    "com-modbus": "git://github.com/adrianaryaputra/com-modbus.git"
+  }
+}
