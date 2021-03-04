@@ -54,7 +54,7 @@ class ModbusDevice_Nidec_M701 extends ModbusDevice{
     writeParameter({
         menu, 
         parameter, 
-        value = 1, 
+        value, 
         priority = 1,
         callback = (error, success) => {},
     }) {
@@ -132,7 +132,7 @@ class ModbusDevice_Nidec_M701 extends ModbusDevice{
     }
 
 
-    
+
     reset({
         callback = (error, success)=>{},
     }) {
