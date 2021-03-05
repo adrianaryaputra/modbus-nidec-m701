@@ -40,7 +40,7 @@ class ModbusDevice_Nidec_M701 extends ModbusDevice{
         callback = (error, success) => {},
     }) {
         this.handler.send({
-            modbusSendCommand: this.command.readHoldingRegisters,
+            modbusSendCommand: ModbusCommand.readHoldingRegisters,
             modbusSendArgs: [
                 this._findAddress({menu, parameter}), 
                 length
@@ -61,7 +61,7 @@ class ModbusDevice_Nidec_M701 extends ModbusDevice{
         callback = (error, success) => {},
     }) {
         this.handler.send({
-            modbusSendCommand: this.command.writeRegister,
+            modbusSendCommand: ModbusCommand.writeRegister,
             modbusSendArgs: [
                 this._findAddress({menu, parameter}), 
                 value
@@ -92,7 +92,7 @@ class ModbusDevice_Nidec_M701 extends ModbusDevice{
                 if(currentValue == toggleOn) valueToSend = toggleOff;
                 else valueToSend = toggleOn;
                 this.handler.send({
-                    modbusSendCommand: this.command.writeRegister,
+                    modbusSendCommand: ModbusCommand.writeRegister,
                     modbusSendArgs: [
                         this._findAddress({menu, parameter}), 
                         valueToSend
@@ -109,7 +109,7 @@ class ModbusDevice_Nidec_M701 extends ModbusDevice{
 
         // read current data
         this.handler.send({
-            modbusSendCommand: this.command.readHoldingRegisters,
+            modbusSendCommand: ModbusCommand.readHoldingRegisters,
             modbusSendArgs: [
                 this._findAddress({menu, parameter}), 
                 1 //length always 1
